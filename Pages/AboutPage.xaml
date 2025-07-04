@@ -1,0 +1,59 @@
+﻿<Page x:Class="ReTranslator.Pages.AboutPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:ReTranslator.Pages"
+      mc:Ignorable="d"
+      Title="AboutPage" Height="450" Width="800">
+    <Grid Background="White" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- 作者图片 -->
+        <Image Source="/Assets/Author.jpg" Width="200" Height="200" HorizontalAlignment="Center" Grid.Row="0" Margin="0,10,0,10"/>
+
+        <!-- 作者名字 -->
+        <TextBlock Text="Retrocal" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,20"/>
+
+        <!-- 按钮 -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Margin="0,0,0,20">
+            <Button Width="120" Height="35" Click="QQButton_Click" Background="Transparent" Margin="0 0 20 0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Image Source="/Assets/qq.png" Width="20" Height="20" Margin="0,0,8,0"/>
+                    <TextBlock VerticalAlignment="Center">加入QQ群</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Width="120" Height="35" Click="BiliButton_Click" Background="Transparent" Margin="0 0 0 0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Image Source="/Assets/bilibili.png" Width="20" Height="20" Margin="0,0,8,0"/>
+                    <TextBlock VerticalAlignment="Center">Bilibili主页</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Width="120" Height="35" Click="GithubButton_Click" Background="Transparent" Margin="20 0 0 0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Image Source="/Assets/github.png" Width="20" Height="20" Margin="0,0,8,0"/>
+                    <TextBlock VerticalAlignment="Center">作者 GitHub</TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <!-- 介绍文字 -->
+        <TextBlock Grid.Row="3" TextWrapping="Wrap" FontSize="15" Margin="30,0,30,20" TextAlignment="Center" FontWeight="Bold">
+            这是一个由Retrocal开发的免费开源翻译器 目的是辅助大家游玩未汉化的作品
+            <LineBreak/>
+            即便有AI辅助，独立开发仍是比较困难的 给Github项目Star和Bilibili的视频三连就是对我最好的鼓舞
+            <LineBreak/>
+            欢迎加入QQ群陪我聊天,玩游戏~
+        </TextBlock>
+        <TextBlock Grid.Row="4" x:Name="Version" FontSize="12" Text="" FontWeight="ExtraBold" Foreground="DarkCyan" HorizontalAlignment="Center"/>
+    </Grid>
+</Page>

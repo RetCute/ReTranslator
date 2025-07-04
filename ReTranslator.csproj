@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    
+    <PropertyGroup>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <OutputType>WinExe</OutputType>
+        <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="OpenAI" Version="2.2.0" />
+      <PackageReference Include="PaddleOCRSharp" Version="5.0.0.1" />
+      <PackageReference Include="Selenium.UndetectedChromeDriver" Version="1.1.3" />
+      <PackageReference Include="Selenium.WebDriver" Version="4.33.0" />
+      <PackageReference Include="System.Drawing.Common" Version="10.0.0-preview.5.25277.114" />
+      <PackageReference Include="System.Windows.Forms" />
+      <PackageReference Include="YamlDotNet" Version="16.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="OCRModel\**\*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+      <None Remove="Assets\play.png" />
+      <Resource Include="Assets\play.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Assets\icon.png" />
+      <Resource Include="Assets\icon.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Assets\settings.png" />
+      <Resource Include="Assets\settings.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Assets\exit.png" />
+      <Resource Include="Assets\exit.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Assets\about.png" />
+      <Resource Include="Assets\about.png" />
+      <None Remove="Assets\icon.ico" />
+      <Resource Include="Assets\icon.ico" />
+      <None Remove="Assets\qq.png" />
+      <Resource Include="Assets\qq.png" />
+      <None Remove="Assets\github.png" />
+      <Resource Include="Assets\github.png" />
+      <None Remove="Assets\author.jpg" />
+      <Resource Include="Assets\author.jpg" />
+      <None Remove="Assets\bilibili.png" />
+      <Resource Include="Assets\bilibili.png" />
+    </ItemGroup>
+
+</Project>

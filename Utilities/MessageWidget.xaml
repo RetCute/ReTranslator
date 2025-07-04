@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="ReTranslator.Utilities.MessageWidget"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="Auto" Width="Auto">
+    <Border BorderBrush="#BBDEFB" 
+            BorderThickness="1" 
+            Background="#E3F2FD"
+            CornerRadius="4"
+            Margin="0,5"
+            Padding="10">
+        
+        <Grid Width="330">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="Label1" TextWrapping="Wrap" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#0D47A1"/>
+                <Rectangle Height="1" Fill="#90CAF9" Margin="0,8,0,8"/>
+                <TextBlock x:Name="Label2" TextWrapping="Wrap" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#0D47A1"/>
+            </StackPanel>
+            <Button Grid.Column="1" x:Name="UpdateButton" Content="Update"
+                    Width="60" Height="25"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    Margin="20,8,0,0"
+                    Style="{StaticResource RoundButtonStyle}"/>
+            </Grid>
+    </Border>
+</UserControl>
